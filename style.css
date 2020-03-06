@@ -1,0 +1,301 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+  --bg-blue: rgb(82, 48, 233);
+  --bg-purple: #7334c5;
+  --bg-black: #131313;
+  --bg-linear: linear-gradient(to right, #b8cbb8 0%,
+  #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, 
+  #ee609c 66%, #ee609c 100%);
+  --bg-red: #ff4757;
+  --bg-green: #2ed573;
+  --bg-white: #ffffffaa;
+}
+input[type="submit"]{
+  cursor: pointer;
+  outline: none;
+}
+input[type="password"], 
+input[type="text"], 
+input[type="email"]{
+  outline: none;
+}
+
+body{
+  background: rgb(224, 224, 224);
+  min-height: 100vh;
+}
+::placeholder{
+  color: #ffffffab;
+}
+.nav1, 
+.nav2, 
+.nav3,
+.form1,
+.form2
+{
+  margin-bottom: 40px;
+}
+
+/** NAVBAR 1 **/
+.nav1 .navbar{
+  display: flex;
+  max-width: 100vw;
+  padding: 15px 100px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-purple);
+}
+.nav1 .logo {
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.nav1 .navitem{
+  list-style: none;
+  display: flex;
+}
+.nav1 .navitem li{
+  margin-right: 15px;
+}
+.nav1 .navitem li a{
+  position: relative;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: var(--bg-white);
+}
+.nav1 .navitem li a:before{
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  width: 0px;
+  left: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .2s linear;
+}
+.nav1 .navitem li a:hover{
+  color: #fff;
+}
+.nav1 .navitem li a:hover:before{
+  width: 100%;
+}
+.nav1 .navitem li a.active{
+  color: #fff;
+}
+.nav1 .navitem li a.active:before{
+  width: 100%;
+}
+
+
+/** NAVBAR 2 **/
+.nav2 .navbar{
+  display: flex;
+  max-width: 100vw;
+  padding: 15px 100px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-black);
+}
+.nav2 .logo {
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.nav2 .navitem{
+  list-style: none;
+  display: flex;
+}
+.nav2 .navitem li{
+  margin-right: 15px;
+  transition: transform .2s ease-in;
+}
+.nav2 .navitem li a{
+  position: relative;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: var(--bg-white);
+  transition: color .3s linear;
+}
+.nav2 .navitem li a:hover{
+  color: #fff;
+}
+.nav2 .navitem li:hover{
+  transform: translateY(-5px);
+}
+.nav2 .navitem li a.active{
+  color: #fff;
+}
+
+
+/** NAVBAR 3 **/
+.nav3 .navbar{
+  display: flex;
+  max-width: 100vw;
+  padding: 15px 100px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: var(--bg-linear);
+  background-size: 200%;
+  background-position: 0%;
+  animation: bg 5s infinite;
+}
+@keyframes bg {
+  0%{
+    background-position: 0%;
+  }
+  50%{
+    background-position: 100%;
+  }
+  0%{
+    background-position: 0%;
+  }
+}
+.nav3 .logo {
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.nav3 .navitem{
+  list-style: none;
+  display: flex;
+}
+.nav3 .navitem li{
+  margin-right: 15px;
+  transition: transform .2s ease-in;
+}
+.nav3 .navitem li a{
+  position: relative;
+  padding: 5px 15px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  color: var(--bg-white);
+  transition: .3s ease-out;
+}
+.nav3 .navitem li a:hover{
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+.nav3 .navitem li a.active{
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/** FORM 1 **/
+.form1 form{
+  display: flex;
+  padding: 40px 60px;
+  max-width: 620px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-blue);
+  border-radius: 4px;
+  text-align: right;
+  box-shadow: 3px 3px 12px rgb(0,0,0, .12);
+}
+.form1 .logo{
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  user-select: none;
+}
+.form1 p{
+  color: var(--bg-white);
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+
+.form1 .inputs{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+}
+.form1 input[type="text"], .form1 input[type="password"]{
+  background: transparent;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid rgb(125, 96, 255);
+  color: #fff;
+  position: relative;
+  transition: .2s ease-in;
+}
+.form1 .inputs input[type="text"]:hover, .form1 .inputs input[type="password"]:hover{
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.form1 .inputs input[type="text"]:focus, .form1 .inputs input[type="password"]:focus{
+  transform: translateY(-5px);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.form1 .inputs input[type="submit"]{
+  padding: 8px 15px;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  color: var(--bg-blue);
+  font-weight: bold;
+}
+
+
+/** FORM 2 **/
+.form2 form{
+  display: flex;
+  padding: 40px 60px;
+  max-width: 620px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-red);
+  border-radius: 4px;
+  text-align: right;
+  box-shadow: 3px 3px 12px rgb(0,0,0, .12);
+}
+.form2 .box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.form2 .box .logo{
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1.2px;
+  line-height: 20px;
+  user-select: none;
+}
+.form2 .box p{
+  color: var(--bg-white);
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+.form2 .inputs{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+}
+
+.form2 input[type="text"], .form2 input[type="password"]{
+  background: none;
+  border: 1px solid var(--bg-white);
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+.form2 .inputs input[type="submit"]{
+  background: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: var(--bg-red);
+  font-weight: bold;
+}
