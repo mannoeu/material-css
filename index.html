@@ -1,71 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Material CSS</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="nav1">
-    <nav class="navbar">
-      <span class="logo">BRAND</span>
-      <ul class="navitem">
-        <li><a href="#" class="active">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav1">
+      <nav class="navbar">
+        <span class="logo" id="btn-menu">BRAND</span>
+        <ul class="navitem">
+          <li><a href="#" class="link active">About</a></li>
+          <li><a href="#" class="link">Portfolio</a></li>
+          <li><a href="#" class="link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <div class="nav2">
-    <nav class="navbar">
-      <span class="logo">BRAND</span>
-      <ul class="navitem">
-        <li><a href="#" class="active">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="nav3">
-    <nav class="navbar">
-      <span class="logo">BRAND</span>
-      <ul class="navitem">
-        <li><a href="#" class="active">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="form1">
-    <form action="/" method="">
-      <div class="box">
+    <div class="nav2">
+      <nav class="navbar">
         <span class="logo">BRAND</span>
-        <p>Lorem ipsum dolor sit amet</p>
-      </div>
-      <div class="inputs">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <input type="submit" value="Login">
-      </div>
-    </form>
-  </div>
+        <ul class="navitem">
+          <li><a href="#" class="active">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <div class="form2">
-    <form action="/" method="">
-      <div class="inputs">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <input type="submit" value="Login">
-      </div>
-      <div class="box">
+    <div class="nav3">
+      <nav class="navbar">
         <span class="logo">BRAND</span>
-        <p>Lorem ipsum dolor sit amet</p>
-      </div>
-    </form>
-  </div>
-</body>
+        <ul class="navitem">
+          <li><a href="#" class="active">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="form1">
+      <form action="/" method="">
+        <div class="box">
+          <span class="logo">BRAND</span>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="inputs">
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <input type="submit" value="Login" />
+        </div>
+      </form>
+    </div>
+
+    <div class="form2">
+      <form action="/" method="">
+        <div class="inputs">
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <input type="submit" value="Login" />
+        </div>
+        <div class="box">
+          <span class="logo">BRAND</span>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </form>
+    </div>
+    <script>
+      document.querySelector("#btn-menu").addEventListener("click", () => {
+        document.querySelector(".navitem").classList.toggle("active");
+      });
+
+      document.querySelector("a.link").addEventListener("click", () => {
+        document.querySelector(".navitem").classList.remove("active");
+      });
+    </script>
+  </body>
 </html>
